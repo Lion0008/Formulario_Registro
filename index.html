@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Formulario de Registro</title>
+</head>
+<body class="bg-gray-100 flex justify-center items-center h-screen">
+
+    <div class="bg-white p-8 rounded shadow-md w-96 text-center">
+
+        <h1 class="text-blue-500 text-3xl mb-4 font-semibold">
+            <i class="fas fa-user-plus"></i> REGISTRO
+        </h1>
+        <h2 class="text-gray-600 text-lg mb-6">Completa el formulario de registro</h2>
+
+        <form id="registrationForm" class="text-left">
+
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-user"></i> Nombre completo:
+                </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre completo" required
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-envelope"></i> Correo electrónico:
+                </label>
+                <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico" required
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="password" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-lock"></i> Contraseña:
+                </label>
+                <input type="password" id="password" name="password" placeholder="Crea una contraseña segura" required
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="confirmPassword" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-lock"></i> Confirmar contraseña:
+                </label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repite la contraseña" required
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="telefono" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-phone"></i> Teléfono:
+                </label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Número de teléfono (opcional)"
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="ciudad" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-map-marker-alt"></i> Ciudad:
+                </label>
+                <input type="text" id="ciudad" name="ciudad" placeholder="Escribe tu ciudad"
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="pais" class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-globe"></i> País:
+                </label>
+                <select id="pais" name="pais"
+                    class="w-full px-3 py-2 border rounded focus:outline-none focus:border-blue-500">
+                    <option value="" selected disabled>Selecciona tu país</option>
+                    <option value="1">Estados Unidos</option>
+                    <option value="2">Canadá</option>
+                    <option value="3">México</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-600 text-sm font-semibold mb-2">
+                    <i class="fas fa-camera"></i> Intereses:
+                </label>
+                <div class="flex flex-wrap gap-2">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="interes1" name="interes1" class="mr-2">
+                        <label for="interes1">Viajes</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="interes2" name="interes2" class="mr-2">
+                        <label for="interes2">Deportes</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="interes3" name="interes3" class="mr-2">
+                        <label for="interes3">Tecnología</label>
+                        <!-- Agrega más opciones según sea necesario -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <div class="flex items-center">
+                    <input type="checkbox" id="terminos" name="terminos" class="mr-2">
+                    <label for="terminos" class="text-gray-600 text-sm">
+                        Acepto los <a href="#" class="text-blue-500">términos y condiciones</a>
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit"
+                class="bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue">
+                Registrarse
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
